@@ -117,3 +117,19 @@ int minimumSum(int num){
 
 }
 
+// 10. 1688. Count of Matches in Tournament.
+int numberOfMatches(int n){
+	int matchesPlayed = 0;
+
+	while(n > 1){
+		if(n % 2 != 0){
+			matchesPlayed += (n - 1) / 2;
+			n = (n - 1) / 2 + 1;
+		}else{
+			matchesPlayed += n / 2;
+			n = n / 2;
+		}
+	}
+
+	return matchesPlayed;
+}
