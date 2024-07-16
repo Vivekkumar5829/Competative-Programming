@@ -78,3 +78,21 @@ int smallestEvenMultiple(int n){
 	return 2 * n;
 
 }
+
+
+// 8. // 8. 1281. Subtract the Product and Sum of Digits of an Integer.
+int subtractProductAndSum(int n){
+
+	int product = 1;
+	int sum = 0;
+	while(n > 0){
+		int remainder = n % 10;
+		n = n / 10;
+
+		product *= remainder;
+		sum += remainder;
+
+	}
+
+	return product - sum;
+}
