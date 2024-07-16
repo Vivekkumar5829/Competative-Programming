@@ -14,3 +14,18 @@ vector<double> convertTemperature(double celsius){
 
 	return ans;
 }
+
+
+// 3. 3190. Find Minimum Operations to Make All Elements Divisible by Three.
+int minimumOperations(vector<int>& num){
+
+	int result = 0;
+	for(int i = 0; i < num.size(); i++){
+		if(num[i] % 3 != 0){
+			result++;
+		}
+	}
+
+	return result;
+
+}
