@@ -169,7 +169,7 @@ int numberOfSteps(int n){
 
 }
 
-//. 2520. Count the Digits That Divide a Number.
+//13. 2520. Count the Digits That Divide a Number.
 int countDigits(int num){
 
 	int digits = num;
@@ -184,4 +184,26 @@ int countDigits(int num){
 	}
 
 	return result;
+}
+
+// 15. 2485. Find the Pivot Integer.
+int pivotInteger(int n){
+
+	int temp = 0;
+	int finalSum = 0;
+
+	for(int i = 1; i <= n; i++){
+		
+		finalSum += i;
+	}
+	for(int i = 1; i <=n; i++){
+		temp += i;
+		if(finalSum == temp){
+			return i;
+		}
+		finalSum -= i;
+	}
+
+	return -1;
+
 }
