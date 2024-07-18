@@ -245,3 +245,21 @@ int maximum69Number(int num){
 
         return stoi(temp);
 	}
+
+
+
+// 18. 2427. Number of Common Factors.
+    int commanFactors(int a, int b){
+
+    	int maximum = max(a, b);
+    	int result = 0;
+
+    	for(int i = 1; i <= maximum; i++){
+    		if(a % i == 0 && b % i == 0){
+    			result++;
+    		}
+    	}
+
+    	return result;
+
+    }
