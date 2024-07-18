@@ -285,7 +285,7 @@ int maximum69Number(int num){
 
     	while(num > 0){
     		int remainder = num % 10;
-    		num = n / 10;
+    		num = num / 10;
 
     		if(remainder == 0){
     			return false;
@@ -297,3 +297,10 @@ int maximum69Number(int num){
     	return true;
 
     }
+
+
+// 20. 2651. Calculate Delayed Arrival Time.
+	int findDelayedArrivalTime(int arrivalTime, int delayedTime) {
+        int total = arrivalTime + delayedTime;
+		return total % 24;
+    } 
