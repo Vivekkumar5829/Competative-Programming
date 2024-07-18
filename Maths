@@ -263,3 +263,37 @@ int maximum69Number(int num){
     	return result;
 
     }
+
+// 19. 728. Self Dividing Numbers.
+    vector<int> selfDividingNumbers(int left, int right){
+
+    	vector<int> ans;
+
+    	for(int i = left; i <= right; i++){
+    		if(selfDivisible(i)){
+    			ans.push_back(i);
+    		}
+    	}
+
+    	return ans;
+
+    }
+
+    bool selfDivisible(int i){
+
+    	int num = i;
+
+    	while(num > 0){
+    		int remainder = num % 10;
+    		num = n / 10;
+
+    		if(remainder == 0){
+    			return false;
+    		}
+    		 if(i % remainder != 0){
+    			return false;
+    		}
+    	}
+    	return true;
+
+    }
