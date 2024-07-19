@@ -304,3 +304,29 @@ int maximum69Number(int num){
         int total = arrivalTime + delayedTime;
 		return total % 24;
     } 
+
+
+// 19.07.2024
+// 21. 1716. Calculate Money in Leetcode Bank.
+	int totalMoney(int n) {
+       
+
+		int money = 0;
+		int after7thDay = 2;
+		int increment = 1;
+
+		for(int i = 1; i <= n; i++){
+
+			money += increment;
+			increment++;
+
+			if(i % 7 == 0){
+				increment = after7thDay;
+				after7thDay++;
+			}
+
+		}
+
+		return money;
+
+    }
